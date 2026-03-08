@@ -8,10 +8,6 @@ class HomePage(BasePage):
 
     PATH = "/"
 
-    # Locators
-    
-    NAV_LINKS = "nav a"
-
     def __init__(self, page: Page):
         super().__init__(page)
 
@@ -37,10 +33,10 @@ class HomePage(BasePage):
         """Open the home page."""
         self.navigate(config.BASE_URL + self.PATH)
         return self
-
-    def get_heading_text(self) -> str:
-        """Return the main heading text."""
-        return self.HEADING_TEXT.first.inner_text()
+    
+    def verify_page_loaded(self):
+        """Verify that the home page has loaded by checking for a unique element."""
+        self.HEADING_TEXT.wait_for(state="visible", timeout=10000)
 
     def select_one_way(self):
         """Select the one-way trip option."""

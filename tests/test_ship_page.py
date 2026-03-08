@@ -18,6 +18,7 @@ class TestShipPageStep1:
 
         home = HomePage(page)
         home.open()
+        home.verify_page_loaded()  # Wait for unique element to confirm page load
         home.select_one_way()
         home.enter_origin(scenario.origin)
         home.enter_destination(scenario.destination)
