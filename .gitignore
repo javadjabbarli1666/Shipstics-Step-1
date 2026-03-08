@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Playwright
+screenshots/
+reports/
+traces/
+test-results/
+
+# pytest
+.pytest_cache/
+
+# VS Code
+.vscode/
