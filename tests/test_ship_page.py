@@ -76,5 +76,7 @@ class TestShipPageStep1:
 
         self.ship.click_next()
 
+        page.wait_for_timeout(2000)  # pause to inspect state after next click
+
         # Assertion 6: login page appears after completing Step 1
         expect(self.ship.LOGIN_TEXT).to_be_visible(timeout=10000)

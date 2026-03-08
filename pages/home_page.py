@@ -54,7 +54,7 @@ class HomePage(BasePage):
         first_option = self.page.locator("[role='option']:not(.hidden)").first
         first_option.wait_for(state="visible", timeout=10000)
         # Small delay to allow the UI to fully render before clicking
-        self.page.wait_for_timeout(500)
+        self.page.wait_for_timeout(700)
         first_option.click()
 
     def enter_destination(self, destination: str):
@@ -64,7 +64,7 @@ class HomePage(BasePage):
         first_option = self.page.locator("[role='option']:not(.hidden)").first
         first_option.wait_for(state="visible", timeout=10000)
         # Small delay to allow the UI to fully render before clicking
-        self.page.wait_for_timeout(500)
+        self.page.wait_for_timeout(700)
         first_option.click()
 
     def click_get_started(self):
